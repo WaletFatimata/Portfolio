@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fatimata Walet — Portfolio · Software Engineer & Communication Manager</title>
+  <meta name="description" content="Junior Front-End Developer & Software Engineer based in Bamako. Specialized in web development, digital communication, and social impact." />
+  <meta name="author" content="Fatimata Walet Mohamed Ali" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="mesh-bg" aria-hidden="true">
+  <span></span><span></span><span></span>
+</div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">FW.</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#qr">Quick Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-switcher" aria-label="Language">
+        <button class="lang-btn" onclick="location.href='index.html'" aria-pressed="false">FR</button>
+        <button class="lang-btn active" onclick="location.href='en.html'" aria-pressed="true">EN</button>
+      </div>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="mobile-menu" aria-label="Mobile menu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#qr">Quick Contact</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="hero" aria-labelledby="hero-title">
+  <div class="wrapper">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge" data-aos="fade-down">
+          Available for opportunities & freelance
+        </div>
+
+        <h1 id="hero-title" class="hero-title" data-aos="fade-up" data-aos-delay="80">
+          Software Engineer<br/>
+          <span class="gradient-text">&amp; Digital Comms</span><br/>
+          Social Impact
+        </h1>
+
+        <p class="hero-sub" data-aos="fade-up" data-aos-delay="160">
+          Junior front-end developer leveraging digital skills to serve innovative, inclusive, and high-social-impact initiatives across Africa.
+        </p>
+
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="240" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#contact" class="btn-primary">✉ Let's work together</a>
+          <a href="cv-en.pdf" download="CV_Fatimata_Walet_EN.pdf" class="btn-secondary" style="background: var(--surface2); border: 1px solid var(--border2);">📥 Download CV</a>
+          <a href="#experience" class="btn-secondary">Journey →</a>
+        </div>
+
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="320">
+          <div class="stat-item">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years of Eng. Studies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Key Roles</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Languages Spoken</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card-stack">
+          <div class="hero-card">
+            <div class="hero-card-icon">🖥️</div>
+            <div class="hero-card-title">Web & Mobile Dev</div>
+            <div class="hero-card-text">React · FlutterFlow · Drupal · PHP / MySQL</div>
+            <div class="tag-cloud">
+              <span class="tag">Frontend</span>
+              <span class="tag">CMS</span>
+              <span class="tag">Mobile</span>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">📣</div>
+            <div class="hero-card-title">Communications & Impact</div>
+            <div class="hero-card-text">Digital Strategy · Content Creation · Social Media</div>
+            <div class="tag-cloud">
+              <span class="tag">Community Management</span>
+              <span class="tag">M&E Reports</span>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">🌍</div>
+            <div class="hero-card-title">Tech Environment</div>
+            <div class="hero-card-text">Sahel Solidaire NGO · Africa Green Tec · IsmaCorp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-title">
+  <div class="wrapper">
+    <div data-aos="fade-up">
+      <p class="section-label">About</p>
+      <h2 id="about-title" class="section-title">Hybrid Profile<br/>Tech × Communication</h2>
+      <p class="section-desc">
+        Software Engineering graduate from Universiapolis (Morocco), I blend algorithmic structure with modern communication skills to advance digital transformation.
+      </p>
+    </div>
+
+    <div class="bento-grid">
+      <div class="bento-card span-2" data-aos="fade-up" data-aos-delay="60">
+        <span class="bento-card-icon">🚀</span>
+        <span class="bento-card-label">My Story</span>
+        <h3 class="bento-card-title">Bamako ↔ Impact Projects</h3>
+        <p class="bento-card-text">
+          Born in Bamako and trained in Morocco, I work at the intersection of web development and humanitarian project management. Highly adaptive, independent, and fluent in multicultural teamwork, I currently supervise communications and database administration for Sahel Solidaire NGO while staying active in building bleeding-edge web & mobile applications.
+        </p>
+      </div>
+
+      <div class="bento-card tall" data-aos="fade-up" data-aos-delay="120">
+        <span class="bento-card-icon">⚡</span>
+        <span class="bento-card-label">Core Skills</span>
+        <h3 class="bento-card-title">Tools & Stack</h3>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>React / FlutterFlow</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>Drupal / PHP / SQL</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.80"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>Community Management</span><span>90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>Database Management & M&E</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>SEO & Digital Strategy</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card" data-aos="fade-up" data-aos-delay="180">
+        <span class="bento-card-icon">🗣️</span>
+        <span class="bento-card-label">Languages</span>
+        <h3 class="bento-card-title">Multilingual</h3>
+        <div class="lang-flags">
+          <div class="lang-item">
+            <div class="lang-dot" style="background:#3ecfcf"></div>
+            <span class="lang-name">French</span>
+            <span class="lang-level">Advanced</span>
+          </div>
+          <div class="lang-item">
+            <div class="lang-dot" style="background:#7c6af7"></div>
+            <span class="lang-name">English</span>
+            <span class="lang-level">Intermediate</span>
+          </div>
+          <div class="lang-item">
+            <div class="lang-dot" style="background:#f06a9e"></div>
+            <span class="lang-name">Tamasheq</span>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-item">
+            <div class="lang-dot" style="background:#ffb938"></div>
+            <span class="lang-name">Bambara</span>
+            <span class="lang-level">Fluent</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card" data-aos="fade-up" data-aos-delay="240">
+        <span class="bento-card-icon">🎓</span>
+        <span class="bento-card-label">Core Education</span>
+        <h3 class="bento-card-title">Software Engineering</h3>
+        <p class="bento-card-text" style="font-size:0.85rem; color:var(--text2); margin-top:8px;">
+          <strong>École Polytechnique d'Agadir (Morocco)</strong><br>
+          Engineering Degree & Preparatory Program (2018 - 2023).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="experience-title">
+  <div class="wrapper">
+    <div data-aos="fade-up">
+      <p class="section-label">Journey</p>
+      <h2 id="experience-title" class="section-title">Work Experience</h2>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; gap: 24px;">
+      <div class="bento-card span-2" data-aos="fade-up">
+        <span class="bento-card-label">January 2025 - Present · Bamako, Mali</span>
+        <h3 class="bento-card-title">Communications and Database Manager — Sahel Solidaire NGO</h3>
+        <p class="bento-card-text" style="margin-top: 10px;">
+          • <strong>Communication Strategy:</strong> Steering the organization's digital identity and designing advocacy campaigns for humanitarian actions.<br>
+          • <strong>Database Management:</strong> Administering and securing project workflows for high-level Monitoring & Evaluation (M&E) reporting.<br>
+          • <strong>Public Relations & Web IT:</strong> Coordinating with technical partners, media networks, and managing corporate web solutions.
+        </p>
+      </div>
+
+      <div class="bento-card span-2" data-aos="fade-up">
+        <span class="bento-card-label">October - November 2024 · Bamako, Mali</span>
+        <h3 class="bento-card-title">Full Stack Developer Intern — IsmaCorp</h3>
+        <p class="bento-card-text" style="margin-top: 10px;">
+          • Developing mobile app interfaces using modern workflows in <strong>FlutterFlow</strong>.<br>
+          • Integrating and upgrading custom web applications using the <strong>Drupal</strong> CMS environment.
+        </p>
+      </div>
+
+      <div class="bento-card span-2" data-aos="fade-up">
+        <span class="bento-card-label">August - September 2024 · Bamako, Mali</span>
+        <h3 class="bento-card-title">Operations & Maintenance Intern — Africa Green Tec</h3>
+        <p class="bento-card-text" style="margin-top: 10px;">
+          • Real-time monitoring and technical logging of smart solar photovoltaic fields via <strong>SteamaCo</strong> IoT software.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="qr" aria-labelledby="qr-title">
+  <div class="wrapper">
+    <div class="qr-container" data-aos="zoom-in">
+      <div class="qr-grid">
+        <div>
+          <h2 id="qr-title" class="qr-title">Instant Networking</h2>
+          <p class="qr-text">
+            Scan this unique QR code generated in real-time to visit my LinkedIn profile and connect seamlessly.
+          </p>
+        </div>
+        <div class="qr-visual">
+          <div id="qrCanvas" class="qr-inner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrapper">
+    <div class="contact-grid">
+      <div data-aos="fade-right">
+        <p class="section-label">Contact</p>
+        <h2 id="contact-title" class="section-title">Let's craft the<br/>digital future</h2>
+        <p class="section-desc">
+          Looking for a tailored web solution, an impactful strategy, or a collaborative partner? Reach out today.
+        </p>
+
+        <div class="contact-info-list">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <div class="info-lbl">Location</div>
+              <div class="info-val">Bamako, Mali</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✉</span>
+            <div>
+              <div class="info-lbl">Email</div>
+              <div class="info-val"><a href="mailto:fatimata.walet@e-polytechnique.ma">fatimata.walet@e-polytechnique.ma</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">☎</span>
+            <div>
+              <div class="info-lbl">Phone</div>
+              <div class="info-val"><a href="tel:+22376981801">+223 76 98 18 01</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card" data-aos="fade-left">
+        <form action="https://formspree.io/f/xoqkqbve" method="POST" id="portfolioContactForm" novalidate>
+          <div class="form-group">
+            <label for="frmName" class="form-label">Full Name</label>
+            <input type="text" name="name" id="frmName" class="form-control" placeholder="e.g. John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="frmEmail" class="form-label">Email Address</label>
+            <input type="email" name="email" id="frmEmail" class="form-control" placeholder="e.g. john.doe@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="frmMessage" class="form-label">Your Message</label>
+            <textarea name="message" id="frmMessage" class="form-control" rows="5" placeholder="Describe your project or vision..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Message ✉</button>
+        </form>
+      </div>
+
+      <div class="success-overlay" id="successOverlay" aria-live="polite">
+        <div class="success-check" role="img" aria-label="Success">✓</div>
+        <h3 class="success-title">Message sent!</h3>
+        <p class="success-text">Thank you for your message. I'll get back to you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <p class="footer-copy">
+      © 2026 Fatimata Walet Mohamed Ali — Crafted with ♥ from Bamako
+    </p>
+    <div class="footer-socials">
+      <a class="social-link" href="https://linkedin.com/in/fatimata-walet-mohamed-ali-078727256" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a class="social-link" href="mailto:fatimata.walet@e-polytechnique.ma" aria-label="Email">✉</a>
+      <a class="social-link" href="tel:+22376981801" aria-label="Phone">☎</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" aria-label="Scroll to top">▲</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fatimata Walet — Portfolio · Software Engineer & Communication Manager</title>
+  <meta name="description" content="Junior Front-End Developer & Software Engineer based in Bamako. Specialized in web development, digital communication, and social impact." />
+  <meta name="author" content="Fatimata Walet Mohamed Ali" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="mesh-bg" aria-hidden="true">
+  <span></span><span></span><span></span>
+</div>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">FW.</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#qr">Quick Contact</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="lang-switcher" aria-label="Language">
+        <button class="lang-btn" onclick="location.href='index.html'" aria-pressed="false">FR</button>
+        <button class="lang-btn active" onclick="location.href='en.html'" aria-pressed="true">EN</button>
+      </div>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<nav class="mobile-menu" aria-label="Mobile menu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#qr">Quick Contact</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="hero" aria-labelledby="hero-title">
+  <div class="wrapper">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge" data-aos="fade-down">
+          Available for opportunities & freelance
+        </div>
+
+        <h1 id="hero-title" class="hero-title" data-aos="fade-up" data-aos-delay="80">
+          Software Engineer<br/>
+          <span class="gradient-text">&amp; Digital Comms</span><br/>
+          Social Impact
+        </h1>
+
+        <p class="hero-sub" data-aos="fade-up" data-aos-delay="160">
+          Junior front-end developer leveraging digital skills to serve innovative, inclusive, and high-social-impact initiatives across Africa.
+        </p>
+
+        <div class="hero-cta" data-aos="fade-up" data-aos-delay="240" style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#contact" class="btn-primary">✉ Let's work together</a>
+          <a href="cv-en.pdf" download="CV_Fatimata_Walet_EN.pdf" class="btn-secondary" style="background: var(--surface2); border: 1px solid var(--border2);">📥 Download CV</a>
+          <a href="#experience" class="btn-secondary">Journey →</a>
+        </div>
+
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="320">
+          <div class="stat-item">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years of Eng. Studies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">3</div>
+            <div class="stat-label">Key Roles</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Languages Spoken</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card-stack">
+          <div class="hero-card">
+            <div class="hero-card-icon">🖥️</div>
+            <div class="hero-card-title">Web & Mobile Dev</div>
+            <div class="hero-card-text">React · FlutterFlow · Drupal · PHP / MySQL</div>
+            <div class="tag-cloud">
+              <span class="tag">Frontend</span>
+              <span class="tag">CMS</span>
+              <span class="tag">Mobile</span>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">📣</div>
+            <div class="hero-card-title">Communications & Impact</div>
+            <div class="hero-card-text">Digital Strategy · Content Creation · Social Media</div>
+            <div class="tag-cloud">
+              <span class="tag">Community Management</span>
+              <span class="tag">M&E Reports</span>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-icon">🌍</div>
+            <div class="hero-card-title">Tech Environment</div>
+            <div class="hero-card-text">Sahel Solidaire NGO · Africa Green Tec · IsmaCorp</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" aria-labelledby="about-title">
+  <div class="wrapper">
+    <div data-aos="fade-up">
+      <p class="section-label">About</p>
+      <h2 id="about-title" class="section-title">Hybrid Profile<br/>Tech × Communication</h2>
+      <p class="section-desc">
+        Software Engineering graduate from Universiapolis (Morocco), I blend algorithmic structure with modern communication skills to advance digital transformation.
+      </p>
+    </div>
+
+    <div class="bento-grid">
+      <div class="bento-card span-2" data-aos="fade-up" data-aos-delay="60">
+        <span class="bento-card-icon">🚀</span>
+        <span class="bento-card-label">My Story</span>
+        <h3 class="bento-card-title">Bamako ↔ Impact Projects</h3>
+        <p class="bento-card-text">
+          Born in Bamako and trained in Morocco, I work at the intersection of web development and humanitarian project management. Highly adaptive, independent, and fluent in multicultural teamwork, I currently supervise communications and database administration for Sahel Solidaire NGO while staying active in building bleeding-edge web & mobile applications.
+        </p>
+      </div>
+
+      <div class="bento-card tall" data-aos="fade-up" data-aos-delay="120">
+        <span class="bento-card-icon">⚡</span>
+        <span class="bento-card-label">Core Skills</span>
+        <h3 class="bento-card-title">Tools & Stack</h3>
+        <div class="skill-bar-wrap">
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>React / FlutterFlow</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>Drupal / PHP / SQL</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.80"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>Community Management</span><span>90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>Database Management & M&E</span><span>85%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.85"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-head"><span>SEO & Digital Strategy</span><span>80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" style="--w:0.80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card" data-aos="fade-up" data-aos-delay="180">
+        <span class="bento-card-icon">🗣️</span>
+        <span class="bento-card-label">Languages</span>
+        <h3 class="bento-card-title">Multilingual</h3>
+        <div class="lang-flags">
+          <div class="lang-item">
+            <div class="lang-dot" style="background:#3ecfcf"></div>
+            <span class="lang-name">French</span>
+            <span class="lang-level">Advanced</span>
+          </div>
+          <div class="lang-item">
+            <div class="lang-dot" style="background:#7c6af7"></div>
+            <span class="lang-name">English</span>
+            <span class="lang-level">Intermediate</span>
+          </div>
+          <div class="lang-item">
+            <div class="lang-dot" style="background:#f06a9e"></div>
+            <span class="lang-name">Tamasheq</span>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-item">
+            <div class="lang-dot" style="background:#ffb938"></div>
+            <span class="lang-name">Bambara</span>
+            <span class="lang-level">Fluent</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card" data-aos="fade-up" data-aos-delay="240">
+        <span class="bento-card-icon">🎓</span>
+        <span class="bento-card-label">Core Education</span>
+        <h3 class="bento-card-title">Software Engineering</h3>
+        <p class="bento-card-text" style="font-size:0.85rem; color:var(--text2); margin-top:8px;">
+          <strong>École Polytechnique d'Agadir (Morocco)</strong><br>
+          Engineering Degree & Preparatory Program (2018 - 2023).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" aria-labelledby="experience-title">
+  <div class="wrapper">
+    <div data-aos="fade-up">
+      <p class="section-label">Journey</p>
+      <h2 id="experience-title" class="section-title">Work Experience</h2>
+    </div>
+
+    <div style="margin-top: 40px; display: grid; gap: 24px;">
+      <div class="bento-card span-2" data-aos="fade-up">
+        <span class="bento-card-label">January 2025 - Present · Bamako, Mali</span>
+        <h3 class="bento-card-title">Communications and Database Manager — Sahel Solidaire NGO</h3>
+        <p class="bento-card-text" style="margin-top: 10px;">
+          • <strong>Communication Strategy:</strong> Steering the organization's digital identity and designing advocacy campaigns for humanitarian actions.<br>
+          • <strong>Database Management:</strong> Administering and securing project workflows for high-level Monitoring & Evaluation (M&E) reporting.<br>
+          • <strong>Public Relations & Web IT:</strong> Coordinating with technical partners, media networks, and managing corporate web solutions.
+        </p>
+      </div>
+
+      <div class="bento-card span-2" data-aos="fade-up">
+        <span class="bento-card-label">October - November 2024 · Bamako, Mali</span>
+        <h3 class="bento-card-title">Full Stack Developer Intern — IsmaCorp</h3>
+        <p class="bento-card-text" style="margin-top: 10px;">
+          • Developing mobile app interfaces using modern workflows in <strong>FlutterFlow</strong>.<br>
+          • Integrating and upgrading custom web applications using the <strong>Drupal</strong> CMS environment.
+        </p>
+      </div>
+
+      <div class="bento-card span-2" data-aos="fade-up">
+        <span class="bento-card-label">August - September 2024 · Bamako, Mali</span>
+        <h3 class="bento-card-title">Operations & Maintenance Intern — Africa Green Tec</h3>
+        <p class="bento-card-text" style="margin-top: 10px;">
+          • Real-time monitoring and technical logging of smart solar photovoltaic fields via <strong>SteamaCo</strong> IoT software.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="qr" aria-labelledby="qr-title">
+  <div class="wrapper">
+    <div class="qr-container" data-aos="zoom-in">
+      <div class="qr-grid">
+        <div>
+          <h2 id="qr-title" class="qr-title">Instant Networking</h2>
+          <p class="qr-text">
+            Scan this unique QR code generated in real-time to visit my LinkedIn profile and connect seamlessly.
+          </p>
+        </div>
+        <div class="qr-visual">
+          <div id="qrCanvas" class="qr-inner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrapper">
+    <div class="contact-grid">
+      <div data-aos="fade-right">
+        <p class="section-label">Contact</p>
+        <h2 id="contact-title" class="section-title">Let's craft the<br/>digital future</h2>
+        <p class="section-desc">
+          Looking for a tailored web solution, an impactful strategy, or a collaborative partner? Reach out today.
+        </p>
+
+        <div class="contact-info-list">
+          <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+              <div class="info-lbl">Location</div>
+              <div class="info-val">Bamako, Mali</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">✉</span>
+            <div>
+              <div class="info-lbl">Email</div>
+              <div class="info-val"><a href="mailto:fatimata.walet@e-polytechnique.ma">fatimata.walet@e-polytechnique.ma</a></div>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon">☎</span>
+            <div>
+              <div class="info-lbl">Phone</div>
+              <div class="info-val"><a href="tel:+22376981801">+223 76 98 18 01</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card" data-aos="fade-left">
+        <form action="https://formspree.io/f/xoqkqbve" method="POST" id="portfolioContactForm" novalidate>
+          <div class="form-group">
+            <label for="frmName" class="form-label">Full Name</label>
+            <input type="text" name="name" id="frmName" class="form-control" placeholder="e.g. John Doe" required />
+          </div>
+
+          <div class="form-group">
+            <label for="frmEmail" class="form-label">Email Address</label>
+            <input type="email" name="email" id="frmEmail" class="form-control" placeholder="e.g. john.doe@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="frmMessage" class="form-label">Your Message</label>
+            <textarea name="message" id="frmMessage" class="form-control" rows="5" placeholder="Describe your project or vision..." required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Message ✉</button>
+        </form>
+      </div>
+
+      <div class="success-overlay" id="successOverlay" aria-live="polite">
+        <div class="success-check" role="img" aria-label="Success">✓</div>
+        <h3 class="success-title">Message sent!</h3>
+        <p class="success-text">Thank you for your message. I'll get back to you within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <p class="footer-copy">
+      © 2026 Fatimata Walet Mohamed Ali — Crafted with ♥ from Bamako
+    </p>
+    <div class="footer-socials">
+      <a class="social-link" href="https://linkedin.com/in/fatimata-walet-mohamed-ali-078727256" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a class="social-link" href="mailto:fatimata.walet@e-polytechnique.ma" aria-label="Email">✉</a>
+      <a class="social-link" href="tel:+22376981801" aria-label="Phone">☎</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" aria-label="Scroll to top">▲</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
