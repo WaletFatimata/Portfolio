@@ -72,7 +72,7 @@
     .mobile-menu.open { opacity: 1; pointer-events: all; }
     .mobile-menu a { font-family: var(--ff-display); font-size: 3rem; color: var(--ivory); font-weight: 300; }
 
-    #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 6vw; gap: 4rem; position: relative; overflow: hidden; }
+        #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 6vw; gap: 4rem; position: relative; overflow: hidden; }
     .hero-bg-circle { position: absolute; right: -10vw; top: 50%; transform: translateY(-50%); width: 55vw; height: 55vw; max-width: 720px; max-height: 720px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, var(--sand), var(--ivory)); z-index: 0; animation: breathe 8s ease-in-out infinite; }
     @keyframes breathe { 0%,100%{transform:translateY(-50%) scale(1)} 50%{transform:translateY(-50%) scale(1.04)} }
     .hero-content { position: relative; z-index: 2; }
@@ -101,6 +101,68 @@
     .scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; font-family: var(--ff-mono); font-size: .6rem; letter-spacing: .15em; color: var(--mist); animation: fadeInUp 1s 1.5s both; }
     .scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--mist), transparent); animation: scrollDown 2s ease-in-out infinite; }
     @keyframes scrollDown { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+
+    /* ========================================================
+       ✨ CORRECTIF MOBILE INTÉGRÉ (ÉCRANS JUSQU'À 768px) ✨
+       ======================================================== */
+    @media (max-width: 768px) {
+      #hero {
+        grid-template-columns: 1fr;
+        padding-top: 140px; /* Donne de l'air sous la barre de navigation fixe */
+        padding-bottom: 60px;
+        gap: 2.5rem;
+        height: auto;
+        min-height: 100vh;
+        text-align: center;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-tag {
+        justify-content: center;
+      }
+      .hero-tag::before {
+        display: none; /* Nettoie la ligne qui décale le centrage */
+      }
+      .hero-name {
+        font-size: 2.4rem; /* Ajuste le nom pour qu'il ne déborde pas */
+        line-height: 1.2;
+      }
+      .hero-sub {
+        margin: 0 auto 2rem auto;
+      }
+      .hero-ctas {
+        justify-content: center;
+      }
+      .hero-visual {
+        justify-content: center;
+        order: -1; /* Remonte le bloc photo beige au-dessus du texte */
+      }
+      .hero-photo-wrap {
+        width: min(260px, 65vw);
+      }
+      /* Répare les badges superposés */
+      .hero-stats {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 1.5rem;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+      }
+      .stat-pill {
+        padding: .6rem 1rem;
+        flex: 1;
+        max-width: 130px;
+      }
+      .scroll-hint {
+        display: none; /* Optionnel : cache l'indicateur "scroll" qui charge l'écran mobile */
+      }
+    }
+
 
     section { padding: 7rem 6vw; }
     .section-header { margin-bottom: 4.5rem; }
