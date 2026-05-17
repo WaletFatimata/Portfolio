@@ -102,7 +102,7 @@
     .scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--mist), transparent); animation: scrollDown 2s ease-in-out infinite; }
     @keyframes scrollDown { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
 
-    /* ========================================================
+        /* ========================================================
        ✨ CORRECTIF MOBILE INTÉGRÉ (ÉCRANS JUSQU'À 768px) ✨
        ======================================================== */
     @media (max-width: 768px) {
@@ -137,31 +137,171 @@
         justify-content: center;
       }
       .hero-visual {
+        display: flex;
+        flex-direction: column; /* Aligne l'image et ses stats de haut en bas */
+        align-items: center;
         justify-content: center;
         order: -1; /* Remonte le bloc photo beige au-dessus du texte */
+        width: 100%;
       }
       .hero-photo-wrap {
         width: min(260px, 65vw);
       }
-      /* Répare les badges superposés */
+      
+      /* 🛠️ LE FIX PRÉCIS POUR LES BLOCS DE CHIFFRES 🛠️ */
       .hero-stats {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        margin-top: 1.5rem;
-        justify-content: center;
-        gap: 1rem;
-        width: 100%;
+        position: relative !important; /* Force les blocs à quitter le mode absolu */
+        bottom: auto !important;
+        left: auto !important;
+        margin-top: 2rem !important; /* Pousse les blocs sous l'image beige */
+        display: flex !important;
+        flex-direction: row !important; /* Force l'alignement côte à côte */
+        justify-content: center !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        z-index: 4 !important;
       }
       .stat-pill {
-        padding: .6rem 1rem;
-        flex: 1;
-        max-width: 130px;
+        position: relative !important;
+        background: var(--white) !important;
+        padding: .8rem 1.2rem !important;
+        margin: 0 !important;
+        flex: 1 !important;
+        max-width: 140px !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,.07) !important;
       }
       .scroll-hint {
-        display: none; /* Optionnel : cache l'indicateur "scroll" qui charge l'écran mobile */
+        display: none; /* Cache l'indicateur "scroll" pour alléger l'écran mobile */
       }
     }
+    /* ========================================================
+       🖥️ CONFIGURATION PRINCIPALE (ORDINATEURS ET GRANDS ÉCRANS)
+       ======================================================== */
+    #hero { 
+      min-height: 100vh; 
+      display: grid; 
+      grid-template-columns: 1.2fr 0.8fr; 
+      align-items: center; 
+      padding: 80px 6vw 0 6vw; 
+      gap: 4rem; 
+      position: relative; 
+      overflow: hidden; 
+    }
+    .hero-bg-circle { position: absolute; right: -10vw; top: 50%; transform: translateY(-50%); width: 55vw; height: 55vw; max-width: 720px; max-height: 720px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, var(--sand), var(--ivory)); z-index: 0; animation: breathe 8s ease-in-out infinite; }
+    @keyframes breathe { 0%,100%{transform:translateY(-50%) scale(1)} 50%{transform:translateY(-50%) scale(1.04)} }
+    .hero-content { position: relative; z-index: 2; width: 100%; }
+    .hero-tag { font-family: var(--ff-mono); font-size: .7rem; letter-spacing: .18em; text-transform: uppercase; color: var(--terracotta); display: flex; align-items: center; gap: .8rem; margin-bottom: 1.8rem; }
+    .hero-tag::before { content: ''; width: 40px; height: 1px; background: var(--terracotta); }
+    .hero-name { font-family: var(--ff-display); font-size: clamp(2.4rem, 4.5vw, 5.5rem); font-weight: 300; line-height: 1.1; margin-bottom: 1.5rem; }
+    .hero-name em { font-style: italic; color: var(--terracotta); font-weight: 300; }
+    .hero-sub { font-size: 1rem; color: #555; line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+    
+    .btn-primary { padding: .9rem 2.2rem; background: var(--ink); color: var(--ivory); font-family: var(--ff-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; border: none; cursor: pointer; position: relative; overflow: hidden; transition: color .4s; display: inline-block; text-decoration: none; }
+    .btn-primary::before { content: ''; position: absolute; inset: 0; background: var(--terracotta); transform: translateX(-101%); transition: transform .4s var(--ease-out-expo); }
+    .btn-primary:hover::before { transform: translateX(0); }
+    .btn-primary span { position: relative; z-index: 1; }
+    .btn-outline { padding: .9rem 2.2rem; background: transparent; color: var(--ink); font-family: var(--ff-mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; border: 1px solid var(--ink); cursor: pointer; transition: background .3s, color .3s; display: inline-block; text-decoration: none; }
+    .btn-outline:hover { background: var(--ink); color: var(--ivory); }
+    
+    .hero-visual { position: relative; z-index: 2; display: flex; justify-content: flex-end; align-items: center; width: 100%; }
+    .hero-photo-wrap { width: min(360px, 35vw); aspect-ratio: 3/4; position: relative; background: linear-gradient(135deg, var(--sand) 0%, #d4c8a8 100%); }
+    .hero-photo-wrap::before { content: ''; position: absolute; inset: -12px 12px 12px -12px; border: 1px solid var(--gold); z-index: 0; }
+    .hero-photo-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: var(--ff-display); font-size: 1.2rem; color: var(--ink); position: relative; z-index: 1; gap: .5rem; }
+    .hero-photo-placeholder svg { width: 64px; opacity: .5; }
+    .hero-photo-placeholder small { font-family: var(--ff-mono); font-size: .65rem; letter-spacing: .1em; opacity: .6; text-align: center; }
+    
+    .hero-stats { position: absolute; bottom: -2rem; left: -3rem; z-index: 3; display: flex; gap: 1.5rem; }
+    .stat-pill { background: var(--white); border: 1px solid var(--sand); padding: .8rem 1.2rem; text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,.07); width: 130px; }
+    .stat-pill strong { display: block; font-family: var(--ff-display); font-size: 1.8rem; font-weight: 300; color: var(--terracotta); }
+    .stat-pill span { display: block; font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--mist); line-height: 1.2; margin-top: 2px; }
+    
+    .scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: .5rem; font-family: var(--ff-mono); font-size: .6rem; letter-spacing: .15em; color: var(--mist); animation: fadeInUp 1s 1.5s both; }
+    .scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--mist), transparent); animation: scrollDown 2s ease-in-out infinite; }
+    @keyframes scrollDown { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+
+    /* ========================================================
+       📱 + 📟 RESPONSIVE COMPLET (TABLETTES ET ÉCRANS MOBILES)
+       ======================================================== */
+    @media (max-width: 1024px) {
+      #hero {
+        grid-template-columns: 1fr;
+        padding-top: 140px;
+        padding-bottom: 60px;
+        gap: 3rem;
+        text-align: center;
+        height: auto;
+      }
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .hero-tag {
+        justify-content: center;
+      }
+      .hero-tag::before {
+        display: none;
+      }
+      .hero-name {
+        font-size: clamp(2.2rem, 6vw, 3.5rem);
+        max-width: 600px;
+      }
+      .hero-sub {
+        margin: 0 auto 2rem auto;
+      }
+      .hero-ctas {
+        justify-content: center;
+      }
+      .hero-visual {
+        justify-content: center;
+        flex-direction: column;
+        order: -1; /* L'image passe au-dessus du texte pour un ordre naturel */
+      }
+      .hero-photo-wrap {
+        width: min(280px, 55vw);
+      }
+      /* Les badges se détachent et s'alignent proprement sous l'image */
+      .hero-stats {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        margin-top: 2.5rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+      }
+      .stat-pill {
+        position: relative !important;
+        flex: none !important;
+      }
+      .scroll-hint {
+        display: none; /* Allège l'espace vertical sur tablette/mobile */
+      }
+    }
+
+    @media (max-width: 480px) {
+      #hero {
+        padding-top: 120px;
+        gap: 2rem;
+      }
+      .hero-name {
+        font-size: 2.2rem;
+      }
+      .hero-stats {
+        gap: 1rem !important;
+      }
+      .stat-pill {
+        padding: .6rem 1rem !important;
+        width: 115px;
+      }
+      .stat-pill strong {
+        font-size: 1.5rem;
+      }
+    }
+
 
 
     section { padding: 7rem 6vw; }
